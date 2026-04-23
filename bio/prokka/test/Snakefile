@@ -1,0 +1,7 @@
+rule test_prokka:
+    input:
+        "genome.fasta"
+    output:
+        directory("output")
+    wrapper:
+        "file://.." # Sobe uma pasta para encontrar o wrapper
