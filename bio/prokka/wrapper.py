@@ -1,6 +1,6 @@
 __author__ = "Rodolfo Brandão"
 __copyright__ = "Copyright 2026, Rodolfo Brandão"
-__email__ = "teu_email@uminho.pt"
+__email__ = "pg59765@uminho.pt"
 __license__ = "MIT"
 
 from snakemake.shell import shell
