@@ -1,0 +1,12 @@
+name: metaeuk easy-predict
+description: High-throughput gene discovery and annotation for eukaryotic metagenomics.
+authors:
+  - Rodolfo Brandão Dias Ferreira
+input:
+  - contigs: Ficheiro FASTA com os contigs/genoma
+  - db: Base de dados FASTA de proteínas de referência
+output:
+  - Ficheiros com prefixo definido nos params (ex: .gff, .fas, .codon.fas)
+notes: |
+  * O MetaEuk exige uma pasta temporária (tmp_dir).
+  * O prefixo de saída é definido via params.out_prefix.
