@@ -1,0 +1,18 @@
+LOCUS       test_seq                  60 bp    DNA     linear       24-APR-2026
+DEFINITION  Genus species strain strain.
+ACCESSION   
+VERSION
+KEYWORDS    .
+SOURCE      Genus species
+  ORGANISM  Genus species
+            Unclassified.
+COMMENT     Annotated using prokka 1.14.6 from
+            https://github.com/tseemann/prokka.
+FEATURES             Location/Qualifiers
+     source          1..60
+                     /organism="Genus species"
+                     /mol_type="genomic DNA"
+                     /strain="strain"
+ORIGIN      
+        1 atgcgtacgt agctagctag catcgatcga tcgatcgatc gatcgatcga tcgatcgatc
+//

@@ -1,29 +1,22 @@
-__author__ = "Rodolfo Brandão"
-__copyright__ = "Copyright 2026, Rodolfo Brandão"
-__email__ = "pg59765@uminho.pt"
+"""Snakemake wrapper for Prokka."""
+
+__author__ = "Rodolfo Brandão" 
+__copyright__ = "Copyright 2026, Rodolfo"
 __license__ = "MIT"
 
 from snakemake.shell import shell
-import os
 
-# Argumentos extra (ex: --cpus)
 extra = snakemake.params.get("extra", "")
+log = snakemake.log_fmt_shell(stdout=True, stderr=True)
 
-# Extrair prefixo (opcional)
-prefix = snakemake.params.get("prefix", "prokka_out")
-
-# O Prokka exige que o diretório de saída não exista previamente, ou falhará.
-# No entanto, o Snakemake costuma criar as pastas antes da regra correr.
-# Para evitar o erro do Prokka "Output directory already exists", apagamos a pasta se ela estiver vazia,
-# ou forçamos o Prokka a sobrescrever (--force). O --force é mais seguro.
-force_flag = "--force"
+prefix = snakemake.params.get("prefix", "prokka_results")
 
 shell(
     "prokka "
-    "{extra} "
-    "{force_flag} "
-    "--outdir {snakemake.output[0]} "
-    "--prefix {prefix} "
-    "{snakemake.input[0]} "
-    ">{snakemake.log} 2>&1"
+    " --cpus {snakemake.threads} "
+    " --outdir {snakemake.output.outdir:q} "
+    " --prefix {prefix:q} "
+    " {extra} "
+    " {snakemake.input.fasta:q} "
+    " {log}"
 )

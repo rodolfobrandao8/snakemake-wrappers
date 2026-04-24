@@ -1,7 +1,10 @@
 rule test_prokka:
     input:
-        "genome.fasta"
+        fasta="genome.fasta"
     output:
-        directory("output")
+        outdir=directory("results")
+    params:
+        prefix="teste_final"
+    threads: 1
     wrapper:
-        "file://.." # Sobe uma pasta para encontrar o wrapper
+        "file://../" 
