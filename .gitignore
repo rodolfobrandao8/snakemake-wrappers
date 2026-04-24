@@ -7,3 +7,5 @@ __pycache__
 *~
 docs/_build
 docs/meta-wrappers
+tmp_metaeuk/
+resultados.*
