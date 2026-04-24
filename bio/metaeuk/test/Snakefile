@@ -1,0 +1,13 @@
+rule test_metaeuk:
+    input:
+        contigs="contigs.fasta",
+        db="db.fasta"
+    output:
+        # Pede apenas um dos ficheiros que o MetaEuk gera para validar
+        fas="resultados.fas"
+    params:
+        out_prefix="resultados",
+        tmp_dir="tmp_metaeuk"
+    threads: 1
+    wrapper:
+        "file://../"

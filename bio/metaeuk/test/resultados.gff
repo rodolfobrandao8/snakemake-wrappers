@@ -1,0 +1,4 @@
+contig_real	MetaEuk	gene	1	120	68	+	.	Target_ID=proteina_real;TCS_ID=proteina_real|contig_real|+|0
+contig_real	MetaEuk	mRNA	1	120	68	+	.	Target_ID=proteina_real;TCS_ID=proteina_real|contig_real|+|0_mRNA;Parent=proteina_real|contig_real|+|0
+contig_real	MetaEuk	exon	1	120	68	+	.	Target_ID=proteina_real;TCS_ID=proteina_real|contig_real|+|0_exon_0;Parent=proteina_real|contig_real|+|0_mRNA
+contig_real	MetaEuk	CDS	1	120	68	+	.	Target_ID=proteina_real;TCS_ID=proteina_real|contig_real|+|0_CDS_0;Parent=proteina_real|contig_real|+|0_exon_0
