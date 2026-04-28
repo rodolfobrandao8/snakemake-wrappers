@@ -2,6 +2,8 @@ name: prokka
 description: Rapid prokaryotic genome annotation.
 authors:
   - Rodolfo Brandão Dias Ferreira
+co-author:
+  - Artur Rafael de Oliveira Gomes
 notes: |
   * A ferramenta cria uma pasta de output com vários ficheiros (.gff, .faa, .fna, etc.).
   * O prefixo dos ficheiros está fixado como 'resultado_final' neste wrapper.
