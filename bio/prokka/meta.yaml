@@ -2,8 +2,11 @@ name: prokka
 description: Rapid prokaryotic genome annotation.
 authors:
   - Rodolfo Brandão Dias Ferreira
-co-author:
   - Artur Rafael de Oliveira Gomes
+input:
+  - fasta: FASTA file containing genomic contigs
+output:
+  - Various files including .gff, .gbk, .fna, and .faa
 notes: |
-  * A ferramenta cria uma pasta de output com vários ficheiros (.gff, .faa, .fna, etc.).
-  * O prefixo dos ficheiros está fixado como 'resultado_final' neste wrapper.
+  * Prokka requires a specific output directory via params.outdir.
+  * Use params.extra to pass additional arguments (e.g., --kingdom, --genus).
