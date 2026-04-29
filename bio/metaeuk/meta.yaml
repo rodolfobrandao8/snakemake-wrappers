@@ -1,8 +1,8 @@
 name: metaeuk easy-predict
 description: High-throughput gene discovery and annotation for eukaryotic metagenomics.
 authors:
-  - Rodolfo 
-  - Artur
+  - Rodolfo Brandão Dias Ferreira
+  - Artur Rafael de Oliveira Gomes
 input:
   - contigs: FASTA file containing genomic contigs
   - db: Protein reference database in FASTA format
