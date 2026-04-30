@@ -1,14 +1,14 @@
-name: prokka
+  name: prokka
 description: Rapid prokaryotic genome annotation.
+url: https://github.com/tseemann/prokka
 authors:
   - Rodolfo Brandão Dias Ferreira
   - Artur Rafael de Oliveira Gomes
 input:
-  - fasta: FASTA file with contigs to annotate.
+  - fasta: FASTA file with contigs/genome to annotate.
   - proteins: (Optional) FASTA file of trusted proteins to first annotate from.
 output:
   - gff: Standard GFF3 format annotation.
   - faa: Protein FASTA file of the translated CDS sequences.
-  - (lista os outros outputs importantes que tens)
 params:
-  - extra: Additional arguments to pass to Prokka (e.g., --kingdom, --genus, --strain).
+  - extra: Additional non-file arguments to pass to Prokka (e.g., --kingdom, --genus, --strain).
