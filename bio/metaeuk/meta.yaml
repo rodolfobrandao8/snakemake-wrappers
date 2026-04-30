@@ -1,13 +1,14 @@
-name: metaeuk easy-predict
-description: High-throughput gene discovery and annotation for eukaryotic metagenomics.
+name: metaeuk 
+description: MetaEuk is a toolkit for large-scale gene discovery and annotation in eukaryotes from metagenomes.
+url: https://github.com/soedinglab/metaeuk
 authors:
   - Rodolfo Brandão Dias Ferreira
   - Artur Rafael de Oliveira Gomes
 input:
-  - contigs: FASTA file containing genomic contigs
-  - db: Protein reference database in FASTA format
+  - fasta: FASTA file with the query sequences (e.g. contigs).
+  - db: Target database (FASTA file or MetaEuk/MMseqs2 database).
 output:
-  - Various files with prefix defined in params (e.g., .gff, .fas, .codon.fas)
-notes: |
-  * MetaEuk requires a temporary directory (tmp_dir).
-  * Output prefix is defined via params.out_prefix.
+  - fas: Predicted proteins in FASTA format.
+  - tsv: Predictions in tabular format.
+params:
+  - extra: Additional non-file arguments to pass to MetaEuk (e.g., --e-value, --min-length).

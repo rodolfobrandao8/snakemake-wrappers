@@ -1,5 +1,6 @@
 channels:
   - conda-forge
   - bioconda
+  - nodefaults
 dependencies:
   - metaeuk =6.a5d39d9
