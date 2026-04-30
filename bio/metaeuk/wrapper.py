@@ -1,27 +1,30 @@
 """Snakemake wrapper for MetaEuk easy-predict."""
 
 __author__ = "Rodolfo Brandão Dias Ferreira"
-__copyright__ = "Copyright 2026, Rodolfo"
+__copyright__ = "Copyright 2026, Rodolfo Brandão"
+__email__ = "rodolfobrandão88@gmail.com"
 __license__ = "MIT"
 
-from snakemake.shell import shell
 import os
+from snakemake.shell import shell
 
 log = snakemake.log_fmt_shell(stdout=True, stderr=True)
 extra = snakemake.params.get("extra", "")
 
-out_prefix = snakemake.params.get("out_prefix", "metaeuk_results")
-tmp_dir = snakemake.params.get("tmp_dir", "tmp_metaeuk")
+first_output = snakemake.output[0]
+outdir = os.path.dirname(first_output)
+prefix = os.path.splitext(os.path.basename(first_output))[0]
 
-os.makedirs(tmp_dir, exist_ok=True)
+out_prefix = os.path.join(outdir, prefix)
+
+tmp_dir = os.path.join(outdir, "tmp")
 
 shell(
     "metaeuk easy-predict "
-    "{snakemake.input.contigs:q} "
-    "{snakemake.input.db:q} "
-    "{out_prefix:q} "
-    "{tmp_dir:q} "
-    "--threads {snakemake.threads} "
     "{extra} "
+    "{snakemake.input.fasta} "
+    "{snakemake.input.db} "
+    "{out_prefix} "
+    "{tmp_dir} "
     "{log}"
 )
