@@ -4,9 +4,11 @@ authors:
   - Rodolfo Brandão Dias Ferreira
   - Artur Rafael de Oliveira Gomes
 input:
-  - fasta: FASTA file containing genomic contigs
+  - fasta: FASTA file with contigs to annotate.
+  - proteins: (Optional) FASTA file of trusted proteins to first annotate from.
 output:
-  - Various files including .gff, .gbk, .fna, and .faa
-notes: |
-  * Prokka requires a specific output directory via params.outdir.
-  * Use params.extra to pass additional arguments (e.g., --kingdom, --genus).
+  - gff: Standard GFF3 format annotation.
+  - faa: Protein FASTA file of the translated CDS sequences.
+  - (lista os outros outputs importantes que tens)
+params:
+  - extra: Additional arguments to pass to Prokka (e.g., --kingdom, --genus, --strain).

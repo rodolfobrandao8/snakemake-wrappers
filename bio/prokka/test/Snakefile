@@ -2,9 +2,10 @@ rule test_prokka:
     input:
         fasta="genome.fasta"
     output:
-        outdir=directory("results")
+        gff="results/teste_final.gff",
+        faa="results/teste_final.faa"
     params:
-        prefix="teste_final"
+        extra=""
     threads: 1
     wrapper:
-        "file://../" 
+        "file://../"
