@@ -1,0 +1,15 @@
+rule all:
+    input:
+        "results/gtdbtk.summary.tsv"
+
+rule testar_gtdbtk:
+    input:
+        "data"
+    output:
+        "results/gtdbtk.summary.tsv"
+    params:
+        extension="fasta",
+        extra=""
+    threads: 2
+    wrapper:
+        "file://../"
