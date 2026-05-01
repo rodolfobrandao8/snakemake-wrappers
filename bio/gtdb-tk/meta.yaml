@@ -1,0 +1,14 @@
+name: gtdbtk
+description: Software toolkit for assigning objective taxonomic classifications to bacterial and archaeal genomes (MAGs).
+url: https://github.com/Ecogenomics/GTDBTk
+authors:
+  - Rodolfo Brandão Dias Ferreira
+  - Artur Rafael de Oliveira Gomes
+input:
+  - genome_dir: Directory containing the FASTA files of the genomes/MAGs to classify.
+output:
+  - summary: TSV file containing the final taxonomic classification summary.
+params:
+  - db_path: Path to the downloaded GTDB reference database (sets the GTDBTK_DATA_PATH).
+  - extension: File extension of the genome files in the input directory (e.g., fna, fasta).
+  - extra: Additional non-file arguments to pass to GTDB-Tk classify_wf (e.g., --min_af, --min_perc_aa).
