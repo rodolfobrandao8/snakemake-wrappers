@@ -3016,6 +3016,13 @@ def test_preseq_lc_extrap(run):
         ],
     )
 
+def test_prokka(run):
+    run(
+        "bio/prokka",
+        [
+            "snakemake", "results/teste_final.gff",
+        ],
+    )
 
 def test_prosolo_single_cell_bulk(run):
     run(
