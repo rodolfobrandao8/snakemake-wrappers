@@ -5,17 +5,15 @@ __copyright__ = "Copyright 2026, Rodolfo"
 __email__ = "rodolfobrandao88@gmail.com"
 __license__ = "MIT"
 
-
-import os
+from pathlib import Path
 from snakemake.shell import shell
 
 extra = snakemake.params.get("extra", "")
 log = snakemake.log_fmt_shell(stdout=True, stderr=True)
 
-first_output = snakemake.output[0]
-outdir = os.path.dirname(first_output)
-
-prefix = os.path.splitext(os.path.basename(first_output))[0]
+first_output = Path(snakemake.output[0])
+outdir = first_output.parent
+prefix = first_output.stem
 
 proteins = snakemake.input.get("proteins", "")
 proteins_cmd = f"--proteins {proteins}" if proteins else ""
