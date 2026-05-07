@@ -3,4 +3,4 @@ channels:
   - bioconda
   - nodefaults
 dependencies:
-  - metaeuk =6.a5d39d9
+  - metaeuk =7.bba0d80
