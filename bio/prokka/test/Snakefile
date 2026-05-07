@@ -8,4 +8,4 @@ rule test_prokka:
         extra=""
     threads: 1
     wrapper:
-        "file://../"
+        "master/bio/prokka"
