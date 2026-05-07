@@ -1,23 +1,22 @@
-"""Snakemake wrapper for MetaEuk easy-predict."""
+"""Snakemake wrapper for MetaEuk."""
 
 __author__ = "Rodolfo Brandão Dias Ferreira"
 __copyright__ = "Copyright 2026, Rodolfo Brandão"
 __email__ = "rodolfobrandão88@gmail.com"
 __license__ = "MIT"
 
-import os
+from pathlib import Path
 from snakemake.shell import shell
 
 log = snakemake.log_fmt_shell(stdout=True, stderr=True)
 extra = snakemake.params.get("extra", "")
 
-first_output = snakemake.output[0]
-outdir = os.path.dirname(first_output)
-prefix = os.path.splitext(os.path.basename(first_output))[0]
+first_output = Path(snakemake.output[0])
+outdir = first_output.parent
+prefix = first_output.stem
 
-out_prefix = os.path.join(outdir, prefix)
-
-tmp_dir = os.path.join(outdir, "tmp")
+out_prefix = outdir / prefix
+tmp_dir = outdir / "tmp"
 
 shell(
     "metaeuk easy-predict "
