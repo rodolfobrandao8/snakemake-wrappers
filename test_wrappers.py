@@ -2676,6 +2676,14 @@ def test_macs2_callpeak(run):
         ],
     )
 
+def test_metaeuk(run):
+    run(
+        "bio/metaeuk",
+        [
+            "snakemake",
+            "resultados.fas",
+        ],
+    )
 
 def test_minimap2_aligner(run):
     run(
