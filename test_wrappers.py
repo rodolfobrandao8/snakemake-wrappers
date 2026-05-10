@@ -2532,6 +2532,11 @@ def test_gdc_client_download(run):
         ["snakemake", "raw/testing_sample.maf.gz"],
     )
 
+def test_gtdb_tk(run):
+    run(
+        "bio/gtdb-tk",
+        ["snakemake", "results/gtdbtk.summary.tsv"],
+    )
 
 def test_happy_prepy(run):
     run(
