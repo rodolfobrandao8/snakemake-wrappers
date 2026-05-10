@@ -1,4 +1,4 @@
-name: gtdbtk
+name: gtdb-tk
 description: Software toolkit for assigning objective taxonomic classifications to bacterial and archaeal genomes (MAGs).
 url: https://github.com/Ecogenomics/GTDBTk
 authors:
