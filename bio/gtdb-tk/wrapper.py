@@ -6,6 +6,7 @@ __email__ = "arafaelogomes@gmail.com"
 __license__ = "MIT"
 
 import os
+from pathlib import Path
 from snakemake.shell import shell
 
 extra = snakemake.params.get("extra", "")
@@ -15,7 +16,7 @@ db_path = snakemake.params.get("db_path", "")
 if db_path:
     os.environ["GTDBTK_DATA_PATH"] = db_path
 
-out_dir = os.path.dirname(snakemake.output[0])
+out_dir = Path(snakemake.output[0]).parent
 
 extension = snakemake.params.get("extension", "fasta")
 
