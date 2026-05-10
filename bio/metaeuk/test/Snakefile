@@ -8,4 +8,4 @@ rule test_metaeuk:
         extra=""             
     threads: 1
     wrapper:
-        "file://../"
+        "master/bio/metaeuk"
