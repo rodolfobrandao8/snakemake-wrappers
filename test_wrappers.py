@@ -3021,7 +3021,7 @@ def test_prokka(run):
         "bio/prokka",
         [
             "snakemake",
-            "results/teste_final.gff",
+            "teste_final.gff",
         ],
     )
 
