@@ -7,6 +7,7 @@ authors:
 input:
   - fasta: Contigs to annotate
   - proteins: (Optional) FASTA file of trusted proteins to first annotate from
+  - prodigaltf: (Optional) Training file to use for Prodigal
 output:
   - gff: Standard GFF3 format annotation
   - faa: Protein FASTA file of the translated CDS sequences
