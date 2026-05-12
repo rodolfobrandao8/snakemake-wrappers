@@ -2,8 +2,8 @@ rule test_prokka:
     input:
         fasta="genome.fasta"
     output:
-        gff="results/teste_final.gff",
-        faa="results/teste_final.faa"
+        gff="teste_final.gff",
+        faa="teste_final.faa"
     params:
         extra=""
     threads: 1
