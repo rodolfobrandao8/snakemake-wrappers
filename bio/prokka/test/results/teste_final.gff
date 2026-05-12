@@ -1,5 +1,0 @@
-##gff-version 3
-##sequence-region test_seq 1 60
-##FASTA
->test_seq
-ATGCGTACGTAGCTAGCTAGCATCGATCGATCGATCGATCGATCGATCGATCGATCGATC
