@@ -537,6 +537,11 @@ def test_sed(run):
         },
     )
 
+def test_bakta(run):
+    run(
+        "bio/bakta",
+        ["snakemake", "genome.gff3"],
+    )
 
 def test_bbtools(run):
     run(

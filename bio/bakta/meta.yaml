@@ -1,0 +1,16 @@
+name: bakta
+description: Rapid and standardized annotation of bacterial genomes, MAGs and plasmids.
+url: https://github.com/oschwengers/bakta
+authors:
+  - Rodolfo Brandão Dias Ferreira
+  - Artur Rafael de Oliveira Gomes
+input:
+  - fasta: Contigs or complete genome in FASTA format
+  - proteins: (Optional) FASTA file of trusted protein sequences to improve annotation
+output:
+  - gff3: Standard GFF3 format annotation
+  - faa: Protein FASTA file of the translated CDS sequences
+  - tsv: Tab-separated feature table summary
+params:
+  - db: Path to the downloaded Bakta database (mandatory)
+  - extra: Additional non-file arguments to pass to Bakta (e.g., --genus, --species, --strain, --locus-tag, --gram)
