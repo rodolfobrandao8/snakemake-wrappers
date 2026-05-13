@@ -1,12 +1,12 @@
 rule all:
     input:
-        "results/gtdbtk.summary.tsv"
+        "gtdbtk.summary.tsv"
 
 rule testar_gtdbtk:
     input:
         "data"
     output:
-        "results/gtdbtk.summary.tsv"
+        "gtdbtk.summary.tsv"
     params:
         extension="fasta",
         extra=""

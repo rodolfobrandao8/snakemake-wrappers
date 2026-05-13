@@ -1,7 +1,7 @@
 """Snakemake wrapper for GTDB-Tk classify_wf."""
 
 __author__ = "Rodolfo Brandão Dias Ferreira"
-__copyright__ = "Copyright 2026, Rodolfo"
+__copyright__ = "Copyright 2026, Rodolfo Brandão"
 __email__ = "rodolfobrandao88@gmail.com" 
 __license__ = "MIT"
 
