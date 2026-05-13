@@ -31,7 +31,6 @@ shell(
     "recognizer "
     "-f {snakemake.input.fasta} "
     "-o {outdir} "
-    "-p recognizer_results "
     "-t {snakemake.threads} "
     "{custom_db_cmd} "
     "{resources_cmd} "

@@ -3050,7 +3050,7 @@ def test_rebaler(run):
 def test_recognizer(run):
     run(
         "bio/recognizer",
-        ["snakemake", "recognizer_results.tsv"],
+        ["snakemake", "sequences.tsv"], 
     )
 
 def test_sambamba_flagstat(run):
