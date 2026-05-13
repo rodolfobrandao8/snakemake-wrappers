@@ -1,0 +1,15 @@
+name: upimapi
+description: A tool for retrieving huge amounts of information from UniProt via API and performing homology-based annotation.
+url: https://github.com/iquasere/UPIMAPI
+authors:
+  - Rodolfo Brandão Dias Ferreira
+  - Artur Rafael de Oliveira Gomes
+input:
+  - fasta: FASTA file with amino acid sequences of query proteins.
+output:
+  - tsv: Tabular file (uniprotinfo.tsv) containing the requested information from UniProt.
+  - blast: Alignment file (aligned.blast) of the annotated proteins.
+  - unaligned: FASTA file (unaligned.fasta) with proteins that did not align.
+params:
+  - db: Reference database (e.g., "uniprot", "swissprot", "taxids", or path to a custom FASTA). Default is "uniprot".
+  - extra: Additional non-file arguments to pass to UPIMAPI (e.g., --tax-ids, --columns, --evalue).
