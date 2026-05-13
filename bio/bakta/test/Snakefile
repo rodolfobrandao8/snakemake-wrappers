@@ -4,25 +4,15 @@ rule all:
         "genome.faa",
         "genome.tsv"
 
-rule download_bakta_db:
-    output:
-        directory("db_light")
-    conda:
-        "../environment.yaml"
-    shell:
-        "bakta_db download --output {output} --type light"
-
 rule testar_bakta:
     input:
-        fasta="contigs.fasta",
-        db_trigger="db_light" 
+        fasta="contigs.fasta"
     output:
         "genome.gff3",
         "genome.faa",
         "genome.tsv"
     params:
-        db="db_light", 
         extra=""
-    threads: 2
+    threads: 1
     wrapper:
         "master/bio/bakta"
