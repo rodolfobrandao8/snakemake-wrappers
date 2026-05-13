@@ -15,23 +15,24 @@ custom_db_input = snakemake.input.get("custom_db", "")
 custom_db_param = snakemake.params.get("custom_db", "")
 
 if custom_db_input:
-    custom_db_cmd = f"--custom_database {custom_db_input}"
+    custom_db_cmd = f"-dbs {custom_db_input}"
 elif custom_db_param:
-    custom_db_cmd = f"--custom_database {custom_db_param}"
+    custom_db_cmd = f"-dbs {custom_db_param}"
 else:
     custom_db_cmd = ""
 
 resources_dir = snakemake.params.get("resources_dir", "")
-resources_cmd = f"--resources_directory {resources_dir}" if resources_dir else ""
+resources_cmd = f"-rd {resources_dir}" if resources_dir else ""
 
 first_output = Path(snakemake.output[0])
 outdir = first_output.parent
 
 shell(
     "recognizer "
-    "--file {snakemake.input.fasta} "
-    "--output {outdir} "
-    "--threads {snakemake.threads} "
+    "-f {snakemake.input.fasta} "
+    "-o {outdir} "
+    "-p recognizer_results "
+    "-t {snakemake.threads} "
     "{custom_db_cmd} "
     "{resources_cmd} "
     "{extra} "

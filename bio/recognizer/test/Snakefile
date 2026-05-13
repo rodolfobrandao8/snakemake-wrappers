@@ -1,16 +1,12 @@
 rule all:
     input:
-        "recognizer_results.tsv",
-        "recognizer_results.html",
-        "recognizer_results.xlsx"
+        "recognizer_results.tsv"
 
 rule testar_recognizer:
     input:
         fasta="sequences.fasta"
     output:
-        "recognizer_results.tsv",
-        "recognizer_results.html",
-        "recognizer_results.xlsx"
+        "recognizer_results.tsv"
     params:
         resources_dir="recognizer_db",
         extra="--evalue 0.001"
