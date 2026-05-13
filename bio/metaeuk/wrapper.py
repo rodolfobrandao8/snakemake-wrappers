@@ -2,7 +2,7 @@
 
 __author__ = "Rodolfo Brandão Dias Ferreira"
 __copyright__ = "Copyright 2026, Rodolfo Brandão"
-__email__ = "rodolfobrandão88@gmail.com"
+__email__ = "rodolfobrandao88@gmail.com"
 __license__ = "MIT"
 
 from pathlib import Path
@@ -20,6 +20,7 @@ tmp_dir = outdir / "tmp"
 
 shell(
     "metaeuk easy-predict "
+    "--threads {snakemake.threads} "
     "{extra} "
     "{snakemake.input.fasta} "
     "{snakemake.input.db} "
