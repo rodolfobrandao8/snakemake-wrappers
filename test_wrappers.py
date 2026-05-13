@@ -3047,6 +3047,11 @@ def test_razers3(run):
 def test_rebaler(run):
     run("bio/rebaler", ["snakemake", "sample1.asm.fa"])
 
+def test_recognizer(run):
+    run(
+        "bio/recognizer",
+        ["snakemake", "recognizer_results.tsv"],
+    )
 
 def test_sambamba_flagstat(run):
     run(
