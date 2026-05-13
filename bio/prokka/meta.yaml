@@ -1,4 +1,4 @@
-  name: prokka
+name: prokka
 description: Rapid prokaryotic genome annotation.
 url: https://github.com/tseemann/prokka
 authors:
