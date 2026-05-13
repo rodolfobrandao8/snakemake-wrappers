@@ -1,0 +1,17 @@
+rule all:
+    input:
+        "uniprotinfo.tsv",
+        "aligned.blast"
+
+rule testar_upimapi:
+    input:
+        fasta="sequences.fasta"
+    output:
+        "uniprotinfo.tsv",
+        "aligned.blast"
+    params:
+        db="swissprot",
+        extra="--evalue 0.001"
+    threads: 1
+    wrapper:
+        "master/bio/upimapi"

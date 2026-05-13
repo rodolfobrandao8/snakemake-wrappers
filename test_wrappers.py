@@ -4583,6 +4583,11 @@ def test_chm_eval_eval(run):
         ["snakemake", "chm-eval/calls.summary"],
     )
 
+def test_upimapi(run):
+    run(
+        "bio/upimapi",
+        ["snakemake", "uniprotinfo.tsv"],
+    )
 
 def test_unicycler(run):
     run(
