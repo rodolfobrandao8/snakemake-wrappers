@@ -28,7 +28,7 @@ first_output = Path(snakemake.output[0])
 outdir = first_output.parent
 
 shell(
-    "reCOGnizer "
+    "recognizer "
     "--file {snakemake.input.fasta} "
     "--output {outdir} "
     "--threads {snakemake.threads} "
