@@ -1,14 +1,13 @@
 rule all:
     input:
-        "sequences.tsv"
+        "reCOGnizer_results.tsv"
 
 rule testar_recognizer:
     input:
         fasta="sequences.fasta"
     output:
-        "sequences.tsv"
+        "reCOGnizer_results.tsv"
     params:
-        resources_dir="recognizer_db",
         extra="--evalue 0.001"
     threads: 1
     wrapper:

@@ -15,9 +15,9 @@ custom_db_input = snakemake.input.get("custom_db", "")
 custom_db_param = snakemake.params.get("custom_db", "")
 
 if custom_db_input:
-    custom_db_cmd = f"-dbs {custom_db_input}"
+    custom_db_cmd = f"--custom-databases -dbs {custom_db_input}"
 elif custom_db_param:
-    custom_db_cmd = f"-dbs {custom_db_param}"
+    custom_db_cmd = f"--custom-databases -dbs {custom_db_param}"
 else:
     custom_db_cmd = ""
 
