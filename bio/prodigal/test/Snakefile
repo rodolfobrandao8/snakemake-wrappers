@@ -1,0 +1,19 @@
+rule all:
+    input:
+        "genome.gff",
+        "proteins.faa",
+        "genes.fna",
+        "stats.txt"
+
+rule testar_prodigal:
+    input:
+        fasta="genome.fasta"
+    output:
+        out="genome.gff",
+        faa="proteins.faa",
+        fna="genes.fna",
+        stat="stats.txt"
+    params:
+        extra="-p meta -f gff"
+    wrapper:
+        "master/bio/prodigal"

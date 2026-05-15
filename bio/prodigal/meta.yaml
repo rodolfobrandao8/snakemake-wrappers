@@ -1,0 +1,15 @@
+name: prodigal
+description: Fast, reliable protein-coding gene prediction for prokaryotic genomes.
+url: https://github.com/hyattpd/Prodigal
+authors:
+  - Rodolfo Brandão Dias Ferreira
+  - Artur Rafael de Oliveira Gomes
+input:
+  - fasta: Input nucleotide sequence (FASTA format).
+output:
+  - out: (Optional) Main annotation output file (e.g., GFF, GenBank).
+  - faa: (Optional) Protein translations of the predicted genes.
+  - fna: (Optional) Nucleotide sequences of the predicted genes.
+  - stat: (Optional) Summary statistics file.
+params:
+  - extra: Additional parameters (e.g., -p meta, -c, -f gff, -g 11).

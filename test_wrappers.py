@@ -3026,6 +3026,11 @@ def test_prosolo_single_cell_bulk(run):
         ],
     )
 
+def test_prodigal(run):
+    run(
+        "bio/prodigal",
+        ["snakemake", "genome.gff", "proteins.faa", "genes.fna", "stats.txt"],
+    )
 
 def test_prosolo_control_fdr(run):
     run(
